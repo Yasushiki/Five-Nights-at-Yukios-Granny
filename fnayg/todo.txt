@@ -1,0 +1,15 @@
+﻿tela inicial
+
+tela de vitória/derrota
+
+sons (porta abrindo/fechando, luz ligando, chuva, vento)
+
+animação (porta abrindo/fechando, avó andando?)
+
+fazer a avó aparecer com certa porcentagem de tempo em tempo
+
+dificuldade que aumenta quando passa de nível
+
+fazer a avó ficar invisível e a porta fechada quando estiver com olhos fechados
+
+melhorar sprites

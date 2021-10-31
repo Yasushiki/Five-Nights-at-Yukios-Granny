@@ -20,42 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\fonte\0.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\1.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\2.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\3.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\4.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\5.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\6.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\7.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\8.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\9.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\dc.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="resources\fonte\fonte.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
     <Image Include="resources\images\background.png">
       <Filter>リソース ファイル</Filter>
     </Image>
@@ -65,5 +29,13 @@
     <Image Include="resources\images\celularL.png">
       <Filter>リソース ファイル</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonte\fonte.ttf" />
+    <Font Include="resources\fonte\fonte2.ttf" />
+    <Font Include="resources\fonte\fonte3.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
   </ItemGroup>
 </Project>

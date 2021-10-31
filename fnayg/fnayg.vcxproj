@@ -112,7 +112,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\development\SFML\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-audio-s.lib;sfml-window-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -147,21 +147,17 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\fonte\0.png" />
-    <Image Include="resources\fonte\1.png" />
-    <Image Include="resources\fonte\2.png" />
-    <Image Include="resources\fonte\3.png" />
-    <Image Include="resources\fonte\4.png" />
-    <Image Include="resources\fonte\5.png" />
-    <Image Include="resources\fonte\6.png" />
-    <Image Include="resources\fonte\7.png" />
-    <Image Include="resources\fonte\8.png" />
-    <Image Include="resources\fonte\9.png" />
-    <Image Include="resources\fonte\dc.png" />
-    <Image Include="resources\fonte\fonte.png" />
     <Image Include="resources\images\background.png" />
     <Image Include="resources\images\celularD.png" />
     <Image Include="resources\images\celularL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonte\fonte.ttf" />
+    <Font Include="resources\fonte\fonte2.ttf" />
+    <Font Include="resources\fonte\fonte3.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
