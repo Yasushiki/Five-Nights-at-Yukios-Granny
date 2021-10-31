@@ -2,6 +2,10 @@
 #include <string>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/System.hpp>
+
+#include "avo.hpp"
 
 //　テクスチャロード
 template <typename T>
@@ -13,19 +17,27 @@ bool testLoad(T& file, std::string path) {
 
 
 //　時間フォーマット
-std::string getTime(int time) {
+std::string getTime(int tempo) {
 	
-	int hora = time / 60;
+	int hora = tempo / 60;
 
-	time -= 60 * hora;
+	tempo -= 60 * hora;
 
 	std::string horaStr = hora > 0 ? "0" + std::to_string(hora - 1) : "23";
-	std::string timeStr = time > 9 ? std::to_string(time) : "0" + std::to_string(time);
+	std::string timeStr = tempo > 9 ? std::to_string(tempo) : "0" + std::to_string(tempo);
 
 	return horaStr + ":" + timeStr;
 
 }
 
+
+bool mudou(int valorIni, int valorAtu) {
+	if(valorIni != valorAtu) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 int main() {
 
@@ -57,12 +69,23 @@ int main() {
 	sf::Sprite celularSpr;
 
 
+	//　音
+	//sf::SoundBuffer portaAvoBuffer;
+	//testLoad(portaAvoBuffer, "resources/audio/porta.wav");
+	//sf::Sound portaAvo; 
+	//portaAvo.setBuffer(portaAvoBuffer);
+	sf::Music portaAvo;
+	if(!portaAvo.openFromFile("resources/audio/porta.wav")) {
+		return EXIT_FAILURE;
+	}
+
+
 	//　ゲーム変数
 	bool acordado = true;
 	bool avoAcordado = false;
 
-	int level = 1;
-
+	int level = 5;
+	int horaIni = 0;
 
 
 
@@ -74,11 +97,12 @@ int main() {
 	while(window.isOpen()) {
 
 		//　経過時間
-		sf::Time time;
-		time = clock.getElapsedTime();
+		sf::Time tempo;
+		tempo = clock.getElapsedTime();
+		int hora = static_cast<int>(tempo.asSeconds() + 0.5f);
 
 		//　時間文字列をセット
-		hour.setString(getTime(static_cast<int>(time.asSeconds() + 0.5f)));
+		hour.setString(getTime(hora));
 
 
 		//　イベント処理
@@ -104,6 +128,22 @@ int main() {
 			celularSpr.setTexture(celDTex);
 		}
 
+
+		if((mudou(horaIni, hora)) && (hora == 20)) {
+			horaIni = hora;
+			avoAcordado = true;
+			portaAvo.play();
+		}
+
+		if(avoAcordado) {
+			if(mudou(horaIni, hora)) {
+				horaIni = hora;
+
+				if(hora % 10 == 0) {
+					criarAvo(level);
+				}
+			}
+		}
 
 		window.clear();
 		window.draw(backgroundSpr);

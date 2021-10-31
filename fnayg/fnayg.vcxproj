@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="avo.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +159,15 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="avo.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\audio\porta.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\audio\porta.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

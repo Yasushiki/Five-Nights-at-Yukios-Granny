@@ -1,15 +1,15 @@
-﻿tela inicial
+﻿tela inicial																		[ ]
 
-tela de vitória/derrota
+tela de vitória/derrota																[ ]
 
-sons (porta abrindo/fechando, luz ligando, chuva, vento)
+sons (porta abrindo/fechando, luz ligando, chuva, vento)							[ ]
 
-animação (porta abrindo/fechando, avó andando?)
+animação (porta abrindo/fechando, avó andando?)										[ ]
 
-fazer a avó aparecer com certa porcentagem de tempo em tempo
+fazer a avó aparecer com certa porcentagem de tempo em tempo						[x]
 
-dificuldade que aumenta quando passa de nível
+dificuldade que aumenta quando passa de nível										[ ]
 
-fazer a avó ficar invisível e a porta fechada quando estiver com olhos fechados
+fazer a avó ficar invisível e a porta fechada quando estiver com olhos fechados		[ ]
 
-melhorar sprites
+melhorar sprites																	[ ]
